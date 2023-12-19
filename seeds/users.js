@@ -10,14 +10,14 @@ exports.seed = async function (knex) {
       id: 1,
       name: "user1",
       email: "user1@gmail.com",
-      password: "123",
+      password: "$2b$10$AaGfXxbl5o2T0u52beFqbOFGSOTy3SH/gRtUyoUjfbFQEYc.xvfXm",
       role_id: 1,
     },
     {
       id: 2,
       name: "user2",
       email: "user2@gmail.com",
-      password: "123",
+      password: "$2b$10$AaGfXxbl5o2T0u52beFqbOFGSOTy3SH/gRtUyoUjfbFQEYc.xvfXm",
       role_id: 2,
     },
   ]);
