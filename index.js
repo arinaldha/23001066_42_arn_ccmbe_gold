@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 const HomeRoute = require("./routes/HomeRoute");
 const MasterClassRoute = require("./routes/master/MasterClassRoute");
+const MasterUserRoute = require("./routes/master/MasterUserRoute");
 
 app.get("/", HomeRoute);
 app.use("/login", HomeRoute);
@@ -21,6 +22,7 @@ app.use("/login", HomeRoute);
  * Master Data Routes
  */
 app.use("/master-class", MasterClassRoute);
+app.use("/master-user", MasterUserRoute);
 /**
  * End of Master Data Routes
  */
