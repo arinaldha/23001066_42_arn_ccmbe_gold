@@ -1,0 +1,28 @@
+version: "3"
+services:
+  ccmbe:
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: ccmbe
+    volumes:
+      - ".:/app"
+    container_name: ccmbe
+    hostname: ccmbe
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${PORT}
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    networks:
+      - jupyter
+
+networks:
+  jupyter:
+    driver: bridge
