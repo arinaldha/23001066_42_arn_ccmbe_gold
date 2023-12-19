@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT;
+const bodyParser = require("body-parser");
+
 app.use(express.json());
 app.use(
   express.urlencoded({
     extended: true,
   })
 );
-
+app.use(bodyParser.json());
 const HomeRoute = require("./routes/HomeRoute");
 
 app.get("/", HomeRoute);
