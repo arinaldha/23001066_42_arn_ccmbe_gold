@@ -15,6 +15,7 @@ const HomeRoute = require("./routes/HomeRoute");
 const MasterClassRoute = require("./routes/master/MasterClassRoute");
 const MasterUserRoute = require("./routes/master/MasterUserRoute");
 const MasterLevelRoute = require("./routes/master/MasterLevelRoute");
+const MasterWaveRoute = require("./routes/master/MasterWaveRoute");
 
 app.get("/", HomeRoute);
 app.use("/login", HomeRoute);
@@ -25,6 +26,7 @@ app.use("/login", HomeRoute);
 app.use("/master-class", MasterClassRoute);
 app.use("/master-user", MasterUserRoute);
 app.use("/master-level", MasterLevelRoute);
+app.use("/master-wave", MasterWaveRoute);
 /**
  * End of Master Data Routes
  */
